@@ -27,7 +27,7 @@ metadata:
   name: myapp-service
 spec:
   selector:
-    type: NodePort
+  type: NodePort
     app: myapp
   ports:
   - port: 80
