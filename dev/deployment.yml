@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: hello
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: hello
   replicas: 4
   template:
     metadata:
       labels:
-        app: myapp
+        app: hello
     spec:
       containers:
-      - name: myapp
+      - name: hello
         image: mylandmarktech/hello
         ports:
         - containerPort: 80
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-service
+  name: hello-service
 spec:
-  selector:
   type: NodePort
-    app: myapp
+  selector:
+    app: hello
   ports:
   - port: 80
     protocol: TCP
