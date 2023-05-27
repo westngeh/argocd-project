@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nanajanashia/argocd-app:1.2
+        image: mylandmarktech/hello
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 ---
 
 #service.yaml
@@ -29,9 +29,9 @@ spec:
   selector:
     app: myapp
   ports:
-  - port: 8080
+  - port: 80
     protocol: TCP
-    targetPort: 8080
+    targetPort: 80
 ---
 
 #b) Apply the application.yaml and secret.yaml to the cluster
