@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: mylandmarktech/hello:2
+        image: mylandmarktech/hello:3
         ports:
         - containerPort: 80
 ---
